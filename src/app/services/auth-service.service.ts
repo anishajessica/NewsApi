@@ -6,45 +6,46 @@ import { BehaviorSubject } from 'rxjs';
   providedIn: 'root'
 })
 export class AuthServiceService {
-private authorized = environment.authorized;
-public user:string;
-private token;
-public subject=new BehaviorSubject(this.user);
-  constructor() { 
+  private authorized = environment.authorized;
+  public user: string;
+  private token;
+  public subject = new BehaviorSubject(this.user);
+  constructor() {
   }
-  authenticateUser(inputUser,inputPass) {
+  authenticateUser(inputUser, inputPass) {
     let auth = false;
-    this.authorized.forEach((element)=>{
-    if((element.user==inputUser&&element.pass==inputPass)){
-      auth=true;
-    }})
-    if(auth){     
+    this.authorized.forEach((element) => {
+      if ((element.user === inputUser && element.pass === inputPass)) {
+        auth = true;
+      }
+    });
+    if (auth) {
       this.subject.next(inputUser);
-      this.token=Math.random().toString(36).substring(7);
+      this.token = Math.random().toString(36).substring(7);
       this.setBearerToken(this.token);
       return true;
-    }else{
+    } else {
       return false;
     }
-   }
- 
-   setBearerToken(token) {
-     localStorage.setItem('token',token);     
-   }
- 
-   getBearerToken() {
-     return localStorage.getItem('token')
-   }
- 
-   isUserAuthenticated(token): boolean {    
-     if(token==this.token&&token){
-       return true;
-     }else{
-       return false;
-     }
-   }
-   logout(){
-     this.subject.next('');
-     localStorage.removeItem('token');
-   }
+  }
+
+  setBearerToken(token) {
+    localStorage.setItem('token', token);
+  }
+
+  getBearerToken() {
+    return localStorage.getItem('token');
+  }
+
+  isUserAuthenticated(token): boolean {
+    if (token === this.token && token) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+  logout() {
+    this.subject.next('');
+    localStorage.removeItem('token');
+  }
 }

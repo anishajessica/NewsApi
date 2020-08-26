@@ -10,8 +10,8 @@ import { AuthServiceService } from './auth-service.service';
 })
 export class ApiServiceService {
   private user: any;
-  constructor(private httpClient: HttpClient,private auth:AuthServiceService) {
-  
+  constructor(private httpClient: HttpClient, private auth: AuthServiceService) {
+
   }
 
   getCountry(): string {
@@ -21,7 +21,7 @@ export class ApiServiceService {
   key = environment.api_key;
   country = 'in';
   searchString = '';
-  
+
 
   setCountry(country) {
     this.country = country;
@@ -32,38 +32,30 @@ export class ApiServiceService {
   }
 
   getTopHeadLines(): Observable<object> {
-    this.url = `https://newsapi.org/v2/top-headlines?country=${this.country}&apiKey=${this.key}`
-    return this.httpClient.get<object>(this.url, {
-      headers: new HttpHeaders({
-        'Authorization': `Bearer ${this.key}`,
-      })
-    });
+    this.url = `https://newsapi.org/v2/top-headlines?country=${this.country}&apiKey=${this.key}`;
+    return this.httpClient.get<object>(this.url);
   }
   getAllHeadLines(): Observable<object> {
-    this.url = `https://newsapi.org/v2/everything?q=${this.searchString}&apiKey=${this.key}`
-    return this.httpClient.get<object>(this.url, {
-      headers: new HttpHeaders({
-        'Authorization': `Bearer ${this.key}`,
-      })
-    });
+    this.url = `https://newsapi.org/v2/everything?q=${this.searchString}&apiKey=${this.key}`;
+    return this.httpClient.get<object>(this.url);
   }
   getAllFavorites(): Observable<Array<News>> {
-    this.auth.subject.subscribe(data=>{
-      this.user=data;     
-    })
-    this.url = `http://localhost:3000/${this.user}`
+    this.auth.subject.subscribe(data => {
+      this.user = data;
+    });
+    this.url = `http://localhost:3000/${this.user}`;
     return this.httpClient.get<News[]>(this.url);
   }
   removeFavorite(news: News) {
-    this.auth.subject.subscribe(data=>{
-      this.user=data;
-      console.log(data);      
-    })
-    this.url = `http://localhost:3000/${this.user}/${news.id}`;   
-    return this.httpClient.delete<News>(this.url)
+    this.auth.subject.subscribe(data => {
+      this.user = data;
+      console.log(data);
+    });
+    this.url = `http://localhost:3000/${this.user}/${news.id}`;
+    return this.httpClient.delete<News>(this.url);
   }
   addFavorite(news: News): Observable<News> {
-    news.id=news.url.replace(/[^a-zA-Z]+/g, '');
+    news.id = news.url.replace(/[^a-zA-Z]+/g, '');
     this.url = `http://localhost:3000/${this.user}`;
     return this.httpClient.post<News>(this.url, news);
   }

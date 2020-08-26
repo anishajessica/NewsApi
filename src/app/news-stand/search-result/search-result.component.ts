@@ -9,21 +9,22 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./search-result.component.css']
 })
 export class SearchResultComponent implements OnInit {
-  public newss : News[];
-  constructor(private apiService:ApiServiceService,private route:ActivatedRoute) { }
+  public newss: News[];
+  constructor(private apiService: ApiServiceService, private route: ActivatedRoute) { }
 
   ngOnInit() {
-    this.route.queryParams.subscribe(param=>{  
-      if(param.searchString){
-      this.apiService.setSearchString(param.searchString);
-    }})
+    this.route.queryParams.subscribe(param => {
+      if (param.searchString) {
+        this.apiService.setSearchString(param.searchString);
+      }
+    })
 
-    
+
     this.apiService.getAllHeadLines().subscribe(
-      data=>{      
-        this.newss=Object.values(data)[2];
+      data => {
+        this.newss = Object.values(data)[2];
       },
-      error=>{
+      error => {
         console.log(error);
       }
     )

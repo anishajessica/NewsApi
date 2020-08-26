@@ -8,12 +8,12 @@ import { AuthServiceService } from '../services/auth-service.service';
   styleUrls: ['./footer.component.css']
 })
 export class FooterComponent implements OnInit {
-  public date= new Date();
-  constructor(private router:Router,private auth:AuthServiceService) { }
+  public date = new Date();
+  constructor(private router: Router, private auth: AuthServiceService) { }
 
   ngOnInit() {
   }
-  logout(){
+  logout() {
     this.auth.logout();
     this.router.navigate(['/home'])
   }

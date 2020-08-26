@@ -11,23 +11,23 @@ import { AuthServiceService } from 'src/app/services/auth-service.service';
   styleUrls: ['./favorite.component.css']
 })
 export class FavoriteComponent implements OnInit {
-  public newss : News[];
-  public title : string;
-  public display =true;
-  constructor(private apiService:ApiServiceService,private route:ActivatedRoute,private favService:FavServiceService,private auth:AuthServiceService,private router:Router) {
-    
-   }
+  public newss: News[];
+  public title: string;
+  public display = true;
+  constructor(private apiService: ApiServiceService, private route: ActivatedRoute, private favService: FavServiceService, private auth: AuthServiceService, private router: Router) {
 
-  ngOnInit() {    
-    this.display=!(this.auth.isUserAuthenticated(this.auth.getBearerToken()));
-    this.title='FAVOURITES';
-    this.favService.subject.subscribe(data=>{
-      this.newss=data;
+  }
+
+  ngOnInit() {
+    this.display = !(this.auth.isUserAuthenticated(this.auth.getBearerToken()));
+    this.title = 'FAVOURITES';
+    this.favService.subject.subscribe(data => {
+      this.newss = data;
     })
   }
-  remove(data:News){
-  this.favService.removeFav(data); 
-  this.apiService.removeFavorite(data).subscribe();
-}
+  remove(data: News) {
+    this.favService.removeFav(data);
+    this.apiService.removeFavorite(data).subscribe();
+  }
 
 }

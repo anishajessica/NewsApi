@@ -12,36 +12,38 @@ import { FavGaurdGuard } from './fav-gaurd.guard';
 
 const routes: Routes = [
   {
-    path:'login',
-    component:LoginComponent
+    path: 'login',
+    component: LoginComponent
   },
   {
-    path:'',
-    redirectTo: '/home/countryPage', 
-    pathMatch: 'full' 
+    path: '',
+    redirectTo: '/home/countryPage',
+    pathMatch: 'full'
   },
   {
-    path:'home',
-    component:HomePageComponent,
-    children:[
-      {path:'countryPage',
-    component:CountryPageComponent,
-    },
-    {path:'searchPage',
-    component:SearchResultComponent,
-    },
-    {
-    path:'',
-    redirectTo:'countryPage',
-    pathMatch:'full'
-    }
+    path: 'home',
+    component: HomePageComponent,
+    children: [
+      {
+        path: 'countryPage',
+        component: CountryPageComponent,
+      },
+      {
+        path: 'searchPage',
+        component: SearchResultComponent,
+      },
+      {
+        path: '',
+        redirectTo: 'countryPage',
+        pathMatch: 'full'
+      }
     ]
   }
   ,
   {
-    path:'favorite',
-    component:FavoritePageComponent,
-    canActivate:[FavGaurdGuard]
+    path: 'favorite',
+    component: FavoritePageComponent,
+    canActivate: [FavGaurdGuard]
   }
 
 ];
@@ -51,5 +53,5 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule {
-  
- }
+
+}

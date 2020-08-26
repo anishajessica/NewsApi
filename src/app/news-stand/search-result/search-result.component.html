@@ -1,14 +1,18 @@
 <section class="searches">
-      <mat-list>
-        <mat-list-item *ngFor="let news of newss">
-          <img matListAvatar src={{news.urlToImage}} alt="picture">
-          <h3 matLine> {{news.title}} </h3>
-          <p matLine>
-            <span> {{news.description}} </span>
-            <span class="demo-2"> -- {{news.content}} </span>
-          </p>
-          <a routerLink="/favorite"><mat-icon id="heart">favorite</mat-icon></a>
-          <a href={{news.url}}><mat-icon>more</mat-icon></a>
-        </mat-list-item>
-      </mat-list>
+  <mat-list>
+    <mat-list-item *ngFor="let news of newss">
+      <img matListAvatar src={{news.urlToImage}} alt="picture">
+      <h3 matLine> {{news.title}} </h3>
+      <p matLine>
+        <span> {{news.description}} </span>
+        <span class="demo-2"> -- {{news.content}} </span>
+      </p>
+      <a routerLink="/favorite">
+        <mat-icon id="heart">favorite</mat-icon>
+      </a>
+      <a href={{news.url}}>
+        <mat-icon>more</mat-icon>
+      </a>
+    </mat-list-item>
+  </mat-list>
 </section>

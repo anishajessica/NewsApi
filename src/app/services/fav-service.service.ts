@@ -9,46 +9,45 @@ import { Router } from '@angular/router';
   providedIn: 'root'
 })
 export class FavServiceService {
-  public favList : News[] =[];
+  public favList: News[] = [];
   public subject = new BehaviorSubject<News[]>(this.favList);
-  constructor(private apiService:ApiServiceService,private auth:AuthServiceService, private route:Router) { 
+  constructor(private apiService: ApiServiceService, private auth: AuthServiceService, private route: Router) {
 
   }
-  initializeFavList(){
+  initializeFavList() {
     this.apiService.getAllFavorites().subscribe(
-      data=>{            
+      data => {
         data.forEach(element => {
-          if(this.auth.isUserAuthenticated(this.auth.getBearerToken())){
-          this.updateFavList(element);
-        }
+          if (this.auth.isUserAuthenticated(this.auth.getBearerToken())) {
+            this.updateFavList(element);
+          }
         });
-        this.subject.subscribe(data=>{
-        });
-        
+        this.subject.subscribe();
+
       },
-      error=>{
+      error => {
         console.log(error);
       }
-    )
+    );
   }
-  updateFavList(news:News){
-    let index=this.favList.findIndex((element)=>{
-      return element.url===(news.url);
+  updateFavList(news: News) {
+    const index = this.favList.findIndex((element) => {
+      return element.url === (news.url);
     });
-    if(index===-1){
-    this.favList.push(news);
-    this.subject.next(this.favList);
+    if (index === -1) {
+      this.favList.push(news);
+      this.subject.next(this.favList);
     }
     return index;
   }
-  removeFav(news:News){
-    if(this.auth.isUserAuthenticated(this.auth.getBearerToken())){    
-    let index=this.favList.findIndex((element)=>{
-      return element.url===(news.url);
-    });
-    this.favList.splice(index,1);
-  }else{
-    this.route.navigate(['/login']);
-  }
+  removeFav(news: News) {
+    if (this.auth.isUserAuthenticated(this.auth.getBearerToken())) {
+      const index = this.favList.findIndex((element) => {
+        return element.url === (news.url);
+      });
+      this.favList.splice(index, 1);
+    } else {
+      this.route.navigate(['/login']);
+    }
   }
 }

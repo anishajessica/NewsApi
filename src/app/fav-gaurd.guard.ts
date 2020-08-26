@@ -7,15 +7,15 @@ import { AuthServiceService } from './services/auth-service.service';
   providedIn: 'root'
 })
 export class FavGaurdGuard implements CanActivate {
-  constructor(private authService: AuthServiceService, private router: Router) {}
+  constructor(private authService: AuthServiceService, private router: Router) { }
   canActivate(
     next: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
-  if(this.authService.isUserAuthenticated(this.authService.getBearerToken())){             
-   return true;
-  } else {
-  this.router.navigate(['/login']);
-  return false;
+    if (this.authService.isUserAuthenticated(this.authService.getBearerToken())) {
+      return true;
+    } else {
+      this.router.navigate(['/login']);
+      return false;
+    }
   }
-}
 }

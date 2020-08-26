@@ -13,7 +13,7 @@ import { AuthServiceService } from 'src/app/services/auth-service.service';
 export class CountryPageComponent implements OnInit {
   public newss: News[];
   public country: string;
-  constructor(private router:Router,private apiService: ApiServiceService, private route: ActivatedRoute,private favService:FavServiceService,private auth:AuthServiceService) { }
+  constructor(private router: Router, private apiService: ApiServiceService, private route: ActivatedRoute, private favService: FavServiceService, private auth: AuthServiceService) { }
 
   ngOnInit() {
     this.route.queryParams.subscribe(param => {
@@ -32,15 +32,15 @@ export class CountryPageComponent implements OnInit {
     )
 
   }
-  add(fav) {  
-  if(this.auth.isUserAuthenticated(this.auth.getBearerToken())){
-  this.apiService.addFavorite(fav).subscribe(data => {
-  this.favService.updateFavList(data);
+  add(fav) {
+    if (this.auth.isUserAuthenticated(this.auth.getBearerToken())) {
+      this.apiService.addFavorite(fav).subscribe(data => {
+        this.favService.updateFavList(data);
+      }
+      )
+    } else {
+      this.router.navigate(['/login']);
     }
-  )
-  }else{
-    this.router.navigate(['/login']);
-  }
   }
   names(code) {
     let name = '';

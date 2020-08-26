@@ -1,24 +1,40 @@
 <mat-toolbar id="head">
     <span>UPDATED ON: {{date|date: 'EEEE h:mm a, MMMM d, y'}}</span>
     <span class="fill-remaining-space"></span>
-    <a routerLink="/home"><mat-icon>home</mat-icon></a>
-    <a routerLink="/favorite"><mat-icon>favorite</mat-icon></a>
-    <a href="https://www.facebook.com/"><mat-icon>facebook</mat-icon></a>
-    <a href="http://www.rssmicro.com/api.web"><mat-icon>rss_feed</mat-icon></a>
-    <a href="https://www.facebook.com/"><mat-icon>share</mat-icon></a>
-    <a (click)="logout()"><mat-icon>exit_to_app</mat-icon></a>
+    <a routerLink="/home">
+        <mat-icon>home</mat-icon>
+    </a>
+    <a routerLink="/favorite">
+        <mat-icon>favorite</mat-icon>
+    </a>
+    <a href="https://www.facebook.com/">
+        <mat-icon>facebook</mat-icon>
+    </a>
+    <a href="http://www.rssmicro.com/api.web">
+        <mat-icon>rss_feed</mat-icon>
+    </a>
+    <a href="https://www.facebook.com/">
+        <mat-icon>share</mat-icon>
+    </a>
+    <a (click)="logout()">
+        <mat-icon>exit_to_app</mat-icon>
+    </a>
 </mat-toolbar>
-<mat-toolbar id="title">  
+<mat-toolbar id="title">
     <mat-toolbar-row>
         <img src="/assets/logo.png" alt="logo" id="logo">
-      <span>THE NEWS STAND</span>
+        <span>THE NEWS STAND</span>
     </mat-toolbar-row>
 </mat-toolbar>
 
 <nav mat-tab-nav-bar>
-    <a mat-tab-link (click)="toggle()"><mat-icon style="color: white">menu</mat-icon></a>
+    <a mat-tab-link (click)="toggle()">
+        <mat-icon style="color: white">menu</mat-icon>
+    </a>
     <input matInput placeholder="Find out what's happening" style="color: white" [(ngModel)]="search">
-    <a routerLink="/home/searchPage" (click)="searchCall()"><mat-icon style="color: white" id="search">search</mat-icon></a>
+    <a routerLink="/home/searchPage" (click)="searchCall()">
+        <mat-icon style="color: white" id="search">search</mat-icon>
+    </a>
     <span class="fill-remaining-space"></span>
     <a *ngIf="!value" mat-tab-link routerLink="/home">Welcome, {{user}}</a>
     <a *ngIf="value" mat-tab-link routerLink="/login"> Login </a>
@@ -33,4 +49,3 @@
     <a mat-tab-link (click)="setCountry('my')"> Malaysia </a>
     <a mat-tab-link (click)="setCountry('sg')"> Singapore </a>
 </nav>
-  
