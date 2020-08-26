@@ -3,20 +3,6 @@
     {
       "source": {
         "id": null,
-        "name": "New York Times"
-      },
-      "author": "Gia Kourlas",
-      "title": "Trading Sand and Sea for TikTok Challenges",
-      "description": "This year Beach Sessions, the annual series at Rockaway Beach, will be dance challenges using scores created by contemporary choreographers.",
-      "url": "https://www.nytimes.com/2020/07/28/arts/dance/beach-sessions-rockaway-tiktok.html",
-      "urlToImage": "https://static01.nyt.com/images/2020/07/29/arts/28beach-sessions-1/28beach-sessions-1-facebookJumbo.jpg",
-      "publishedAt": "2020-07-28T16:57:29Z",
-      "content": "She also collaborated with an editor, Britt Kubat; together, they paid homage to the look of the colors and credits of Jean-Luc Godard films. (One of Ms. Tanowitzs loves is the French New Wave.) But … [+1748 chars]",
-      "id": "httpswwwnytimescomartsdancebeachsessionsrockawaytiktokhtml"
-    },
-    {
-      "source": {
-        "id": null,
         "name": "Lifehacker.com"
       },
       "author": "Emily Long",

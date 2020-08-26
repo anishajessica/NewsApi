@@ -43,3 +43,27 @@ nav{
      background-color:lightgrey;
      padding: 0 6vw;
   }
+  @media screen and (max-width: 580px){
+   #head a{
+      size: 2px;
+      padding: 2vw;
+   }
+   #head span{
+      display: none;
+    }
+}
+  @media screen and (max-width: 475px){
+   #logo{
+      height: 60%;
+   }
+   #title{
+      font-size: 1.5em;
+   }
+#bar3 input{
+   padding-right: 0;
+   width: 50vw;
+}
+#search{
+   padding-left: 0;
+}
+  }

@@ -70,3 +70,27 @@ h1{
   #heart:hover{
     color: red;
   }
+  @media screen and (max-width: 475px){
+    mat-card-subtitle,mat-card-content{
+      display:none;
+    }
+    mat-card{
+      min-height: 30vh;
+      padding: 0.5vw;
+      text-align: left;
+    }
+    mat-card-header mat-card-title{
+      font-size:1em;
+    }
+    img {
+      width: 80vw;
+      margin-left: 8px;
+    }
+    img:hover + mat-card-content{
+      display: none;
+      }  
+      .mat-icon{
+        font-size: 40px;
+        margin: 2vh;
+      }
+    }

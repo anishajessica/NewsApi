@@ -22,3 +22,14 @@ mat-form-field{
    background-size: cover;
     background-repeat: no-repeat;
 }
+@media screen and (max-width: 475px){
+    mat-card{
+        min-width: 50vw;
+        margin-left:0vw;
+        height: 30vh;
+        margin-top: 10vh;
+    } 
+    .login-page{
+        height: 100vh;
+    }
+}

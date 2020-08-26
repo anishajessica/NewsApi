@@ -14,3 +14,11 @@
        Every toolbar row uses a flexbox row layout. */
     flex: 1 1 auto;
   }
+  @media screen and (max-width: 580px){
+   #head a{
+      display: none;
+    }
+    #head span{
+       font-size: x-small;
+    }
+}
