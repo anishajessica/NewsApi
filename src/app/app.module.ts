@@ -8,9 +8,9 @@ import { LoginComponent } from './forms/login/login.component';
 import { ToolbarComponent } from './news-stand/toolbar/toolbar.component';
 import { HomePageComponent } from './news-stand/home-page/home-page.component';
 import {FavoriteComponent} from './news-stand/favorite/favorite.component';
-import { CountryPageComponent } from './news-stand/country-page/country-page.component'
+import { CountryPageComponent } from './news-stand/country-page/country-page.component';
 import { SearchResultComponent } from './news-stand/search-result/search-result.component';
-import { FavoritePageComponent } from './news-stand/favorite-page/favorite-page.component'
+import { FavoritePageComponent } from './news-stand/favorite-page/favorite-page.component';
 
 
 

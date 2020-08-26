@@ -16,8 +16,8 @@ export class FavServiceService {
   }
   initializeFavList() {
     this.apiService.getAllFavorites().subscribe(
-      data => {      
-        this.favList=[];
+      data => {
+        this.favList = [];
         data.forEach(element => {
           if (this.auth.isUserAuthenticated(this.auth.getBearerToken())) {
             this.updateFavList(element);

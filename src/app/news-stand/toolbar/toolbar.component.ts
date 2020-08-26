@@ -21,32 +21,32 @@ export class ToolbarComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.router.routeReuseStrategy.shouldReuseRoute = function () {
+    this.router.routeReuseStrategy.shouldReuseRoute = () => {
       return false;
     };
     this.auth.subject.subscribe(data => {
       this.user = data;
-      if (!this.user || this.user == '') {
+      if (!this.user || this.user === '') {
         this.value = true;
       } else {
         this.value = false;
       }
-    })
+    });
   }
 
   toggle() {
     this.display = !(this.display);
   }
-  setCountry(country) {
+  setCountry(ctry) {
     this.display = !(this.display);
-    this.router.navigate(['/home'], { queryParams: { country: country } })
+    this.router.navigate(['/home'], { queryParams: { country: ctry } });
   }
   searchCall() {
-    this.router.navigate(['/home/searchPage'], { queryParams: { searchString: this.search } })
+    this.router.navigate(['/home/searchPage'], { queryParams: { searchString: this.search } });
     this.search = '';
   }
   logout() {
     this.auth.logout();
-    this.router.navigate(['/home'])
+    this.router.navigate(['/home']);
   }
 }

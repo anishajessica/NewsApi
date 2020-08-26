@@ -12,14 +12,16 @@ import { FavServiceService } from 'src/app/services/fav-service.service';
 })
 export class SearchResultComponent implements OnInit {
   public newss: News[];
-  constructor(private apiService: ApiServiceService, private route: ActivatedRoute,private auth:AuthServiceService,private router:Router,private favService:FavServiceService) { }
+  constructor(private apiService: ApiServiceService, private route: ActivatedRoute,
+              private auth: AuthServiceService, private router: Router,
+              private favService: FavServiceService) { }
 
   ngOnInit() {
     this.route.queryParams.subscribe(param => {
       if (param.searchString) {
         this.apiService.setSearchString(param.searchString);
       }
-    })
+    });
 
 
     this.apiService.getAllHeadLines().subscribe(
@@ -29,7 +31,7 @@ export class SearchResultComponent implements OnInit {
       error => {
         console.log(error);
       }
-    )
+    );
 
 
   }
@@ -38,9 +40,9 @@ export class SearchResultComponent implements OnInit {
       this.apiService.addFavorite(fav).subscribe(data => {
         this.favService.updateFavList(data);
       }
-      )
+      );
     } else {
       this.router.navigate(['/login']);
     }
-}
+  }
 }

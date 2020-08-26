@@ -14,21 +14,20 @@ export class ApiServiceService {
 
   }
 
-  getCountry(): string {
-    return this.country;
-  }
   public url;
   key = environment.api_key;
   country = 'in';
   searchString = '';
-
+  getCountry(): string {
+    return this.country;
+  }
 
   setCountry(country) {
     this.country = country;
   }
 
-  setSearchString(string) {
-    this.searchString = string;
+  setSearchString(search) {
+    this.searchString = search;
   }
 
   getTopHeadLines(): Observable<object> {

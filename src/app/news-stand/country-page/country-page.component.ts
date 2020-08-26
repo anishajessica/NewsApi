@@ -13,15 +13,17 @@ import { AuthServiceService } from 'src/app/services/auth-service.service';
 export class CountryPageComponent implements OnInit {
   public newss: News[];
   public country: string;
-  constructor(private router: Router, private apiService: ApiServiceService, private route: ActivatedRoute, private favService: FavServiceService, private auth: AuthServiceService) { }
+  constructor(private router: Router, private apiService: ApiServiceService,
+              private route: ActivatedRoute, private favService: FavServiceService,
+              private auth: AuthServiceService) { }
 
   ngOnInit() {
     this.route.queryParams.subscribe(param => {
-      this.country = this.names(param.country)
+      this.country = this.names(param.country);
       if (param.country) {
         this.apiService.setCountry(param.country);
       }
-    })
+    });
     this.apiService.getTopHeadLines().subscribe(
       data => {
         this.newss = Object.values(data)[2];
@@ -29,7 +31,7 @@ export class CountryPageComponent implements OnInit {
       error => {
         console.log(error);
       }
-    )
+    );
 
   }
   add(fav) {
@@ -37,7 +39,7 @@ export class CountryPageComponent implements OnInit {
       this.apiService.addFavorite(fav).subscribe(data => {
         this.favService.updateFavList(data);
       }
-      )
+      );
     } else {
       this.router.navigate(['/login']);
     }
@@ -46,22 +48,22 @@ export class CountryPageComponent implements OnInit {
     let name = '';
     switch (code) {
       case 'in':
-        name = 'INDIA'
+        name = 'INDIA';
         break;
       case 'us':
-        name = 'USA'
+        name = 'USA';
         break;
       case 'gb':
-        name = 'GREAT BRITAIN'
+        name = 'GREAT BRITAIN';
         break;
       case 'my':
-        name = 'MALAYSIA'
+        name = 'MALAYSIA';
         break;
       case 'sg':
-        name = 'SINGAPORE'
+        name = 'SINGAPORE';
         break;
       case 'au':
-        name = 'AUSTRALIA'
+        name = 'AUSTRALIA';
         break;
       default:
         name = this.names(this.apiService.getCountry());

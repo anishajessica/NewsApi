@@ -5,7 +5,7 @@ export class AppPage {
   navigateToFirstPage() {
     browser.get('/');
   }
-  getCurrent(){
+  getCurrent() {
     return browser.getCurrentUrl();
   }
 
@@ -16,13 +16,13 @@ export class AppPage {
   getTitleText() {
     return element(by.css('#title span')).getText() as Promise<string>;
   }
-  getSearchBar(){
+  getSearchBar() {
     return element(by.css('nav input'));
   }
-  loginButton(){
-    return element(by.cssContainingText('nav a','Login'));
+  loginButton() {
+    return element(by.cssContainingText('nav a', 'Login'));
   }
-  favButton(){
-    return element(by.cssContainingText('nav a','Favorites'));
+  favButton() {
+    return element(by.cssContainingText('nav a', 'Favorites'));
   }
 }

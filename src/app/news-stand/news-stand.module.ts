@@ -11,7 +11,13 @@ import { FavoritePageComponent } from './favorite-page/favorite-page.component';
 
 
 @NgModule({
-  declarations: [ToolbarComponent, HomePageComponent, FavoriteComponent, SearchResultComponent, CountryPageComponent, FavoritePageComponent],
+  declarations: [ ToolbarComponent,
+                  HomePageComponent,
+                  FavoriteComponent,
+                  SearchResultComponent,
+                  CountryPageComponent,
+                  FavoritePageComponent
+                ],
   imports: [
     CommonModule
   ]

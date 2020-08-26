@@ -18,22 +18,22 @@ export class HomePageComponent implements OnInit {
     this.route.queryParams.subscribe(param => {
       switch (param.country) {
         case 'in':
-          this.country = 'INDIA'
+          this.country = 'INDIA';
           break;
         case 'us':
-          this.country = 'USA'
+          this.country = 'USA';
           break;
         case 'gb':
-          this.country = 'GREAT BRITAIN'
+          this.country = 'GREAT BRITAIN';
           break;
         case 'my':
-          this.country = 'MALAYSIA'
+          this.country = 'MALAYSIA';
           break;
         case 'sg':
-          this.country = 'SINGAPORE'
+          this.country = 'SINGAPORE';
           break;
         case 'au':
-          this.country = 'AUSTRALIA'
+          this.country = 'AUSTRALIA';
           break;
         default:
           this.country = this.apiService.getCountry();
@@ -42,7 +42,7 @@ export class HomePageComponent implements OnInit {
       if (param.country) {
         this.apiService.setCountry(param.country);
       }
-    })
+    });
     this.apiService.getTopHeadLines().subscribe(
       data => {
         this.newss = Object.values(data)[2];
@@ -50,7 +50,7 @@ export class HomePageComponent implements OnInit {
       error => {
         console.log(error);
       }
-    )
+    );
 
   }
 

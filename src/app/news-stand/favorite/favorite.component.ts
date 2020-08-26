@@ -14,7 +14,9 @@ export class FavoriteComponent implements OnInit {
   public newss: News[];
   public title: string;
   public display = true;
-  constructor(private apiService: ApiServiceService, private route: ActivatedRoute, private favService: FavServiceService, private auth: AuthServiceService, private router: Router) {
+  constructor(private apiService: ApiServiceService, private route: ActivatedRoute,
+              private favService: FavServiceService, private auth: AuthServiceService,
+              private router: Router) {
 
   }
 
@@ -23,8 +25,8 @@ export class FavoriteComponent implements OnInit {
     this.title = 'FAVOURITES';
     this.favService.subject.subscribe(data => {
       this.newss = data;
-      console.log(this.newss);   
-    })
+      console.log(this.newss);
+    });
   }
   remove(data: News) {
     this.favService.removeFav(data);
