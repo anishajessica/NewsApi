@@ -23,6 +23,7 @@ export class FavoriteComponent implements OnInit {
     this.title = 'FAVOURITES';
     this.favService.subject.subscribe(data => {
       this.newss = data;
+      console.log(this.newss);   
     })
   }
   remove(data: News) {
