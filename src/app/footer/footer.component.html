@@ -1,0 +1,9 @@
+<mat-toolbar id="head">
+    <span>UPDATED ON: {{date|date: 'EEEE h:mm a, MMMM d, y'}}</span>
+    <span class="fill-remaining-space"></span>
+    <a href="https://play.google.com/store?hl=en"><mat-icon>get_app</mat-icon></a>
+    <a href="https://www.facebook.com/"><mat-icon>facebook</mat-icon></a>
+    <a href="http://www.rssmicro.com/api.web"><mat-icon>rss_feed</mat-icon></a>
+    <a href="https://www.facebook.com/"><mat-icon>share</mat-icon></a>
+    <a (click)="logout()"><mat-icon>exit_to_app</mat-icon></a>
+</mat-toolbar>

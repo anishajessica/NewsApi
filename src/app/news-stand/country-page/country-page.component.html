@@ -1,0 +1,20 @@
+<marquee scrollamount = "20"><h1>NEWS IN {{country}}</h1></marquee>
+<section class="country-page">
+    <div *ngFor="let news of newss" class="stand">
+      <mat-card class="card">
+        <mat-card-header>
+          <mat-card-title>{{news.title}}</mat-card-title>
+          <mat-card-subtitle>{{news.author}}</mat-card-subtitle>
+          <mat-card-subtitle>{{news.description}}</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image src={{news.urlToImage}} alt={{news.title}}>
+        <mat-card-content>
+          {{news.content}}
+        </mat-card-content>
+        <mat-card-actions>
+          <a (click)="add(news)"><mat-icon id="heart">favorite</mat-icon></a>
+          <a href={{news.url}}><mat-icon style="color: darkblue;">more</mat-icon></a>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </section>

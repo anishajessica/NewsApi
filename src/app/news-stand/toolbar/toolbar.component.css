@@ -1,0 +1,45 @@
+nav{
+   display: flex;
+   justify-content: space-evenly; 
+   background-color: rgb(0, 0, 0,0.8); 
+}
+#logo{
+   height: 95%;
+   padding:0 2%; 
+}
+.fill-remaining-space {
+    /* This fills the remaining space, by using flexbox. 
+       Every toolbar row uses a flexbox row layout. */
+    flex: 1 1 auto;
+  }
+  #title{
+     padding:2% 0;
+     font-size: 2em;
+     background-image: url('/assets/title.png');
+     background-position: 10% 35%;
+  }
+  #head{
+   height: auto;
+   background-color:black; 
+   display: flex;
+   font-size: 0.9em;
+  }
+  #head a{
+     text-decoration: none;
+     color: white;
+     padding:0.5% 1%;
+  }
+  #search{
+     margin: 2vh;
+  }
+  input{
+   margin: 1vh ;
+   width: 50%;
+   padding :1vh;
+   background-color:rgb(255,255,255,0.1);
+  }
+  #category,#category a{
+     color: red;
+     background-color:lightgrey;
+     padding: 0 6vw;
+  }

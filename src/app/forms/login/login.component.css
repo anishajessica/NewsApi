@@ -1,0 +1,31 @@
+mat-card{
+    max-width: 400px;
+    align-content: right;
+    vertical-align: middle;
+    margin-left:60%;
+    padding:10vh 3vw;
+    box-shadow: 5px 5px grey !important;
+}
+mat-form-field{
+    width:100%;
+}
+.mask{
+    background-color:rgb(0,0,0,0.9);
+    max-width: 100vw;
+    padding: 5%;
+    min-height: 50vh;   
+}
+.login-page{
+    max-width: 100vw;
+    min-height: 50vh;
+   background-image: url(/assets/globalinternet.jpg);
+   background-size: cover;
+    background-repeat: no-repeat;
+}
+/* mat-card-subtitle a{
+    text-decoration:none;
+    color: midnightblue;
+    font-weight: bolder;
+    font-size: larger;
+    text-align: center;
+} */

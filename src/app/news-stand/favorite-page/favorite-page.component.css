@@ -1,0 +1,9 @@
+.favpage{
+    min-height: 60vh;
+    width: 100%;
+    padding:2vh 0;
+    background-image: url('/assets/blackbg.jpg');
+}
+app-favorite{
+    width:100%;
+}

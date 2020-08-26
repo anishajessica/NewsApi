@@ -1,27 +1,41 @@
-# NewsApiCaseStudy
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.25.
+##
+1. run db.json in port 3000
+2. e2e tests for first page done, ng e2e
+3. unit tests are not done.
 
-## Development server
+## Note to reviewer 
+1. webpage is split into 3 parts - toolbar
+                                 - Homepage
+                                 - footer
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+2. Modules present - News-Stand
+                   - forms
+                   - Services
 
-## Code scaffolding
+3. Components present - Footer
+                      - toolbar
+                      - favorite
+                      - favorite page
+                      - country page
+                      - login form
+                      - search result
+4. favorites page is gaurded
+                      - user1 , pass1
+                      - user2 , pass2
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+5. functionalities :
+    a. 3 layer toolbar
+        i.   time and social media and logout button
+        ii.  logo and title 
+        iii. menu to switch countries, search bar, login, favorites page
+    b. Routed Body
+        i.   home- country page
+        ii.  displays result when searched
+        iii. right is flexed to display (sources-unauthorized, favorites-authorizes)
+        iv.  Every news has a heart icon to add to favorite and more icon to read more
+        v.   unauthorized will be redirected to login if tries to add/view favorite
+        vi.  clicking heart in favorites page will remove favorite
+    c. Footer 
+        i.  time
+        ii. social media

@@ -1,0 +1,16 @@
+#head{
+    height: auto;
+    background-color:black; 
+    display: flex;
+    font-size: 0.9em;
+   }
+   #head a{
+      text-decoration: none;
+      color: white;
+      padding:0.5% 1%;
+   }
+   .fill-remaining-space {
+    /* This fills the remaining space, by using flexbox. 
+       Every toolbar row uses a flexbox row layout. */
+    flex: 1 1 auto;
+  }
