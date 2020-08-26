@@ -7,7 +7,7 @@
         <span> {{news.description}} </span>
         <span class="demo-2"> -- {{news.content}} </span>
       </p>
-      <a routerLink="/favorite">
+      <a (click)="add(news)">
         <mat-icon id="heart">favorite</mat-icon>
       </a>
       <a href={{news.url}}>

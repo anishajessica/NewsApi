@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { News } from 'src/app/news';
 import { ApiServiceService } from 'src/app/services/api-service.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+import { AuthServiceService } from 'src/app/services/auth-service.service';
+import { FavServiceService } from 'src/app/services/fav-service.service';
 
 @Component({
   selector: 'app-search-result',
@@ -10,7 +12,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class SearchResultComponent implements OnInit {
   public newss: News[];
-  constructor(private apiService: ApiServiceService, private route: ActivatedRoute) { }
+  constructor(private apiService: ApiServiceService, private route: ActivatedRoute,private auth:AuthServiceService,private router:Router,private favService:FavServiceService) { }
 
   ngOnInit() {
     this.route.queryParams.subscribe(param => {
@@ -31,5 +33,14 @@ export class SearchResultComponent implements OnInit {
 
 
   }
-
+  add(fav) {
+    if (this.auth.isUserAuthenticated(this.auth.getBearerToken())) {
+      this.apiService.addFavorite(fav).subscribe(data => {
+        this.favService.updateFavList(data);
+      }
+      )
+    } else {
+      this.router.navigate(['/login']);
+    }
+}
 }
