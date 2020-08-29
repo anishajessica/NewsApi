@@ -24,6 +24,12 @@ export class ToolbarComponent implements OnInit {
     this.router.routeReuseStrategy.shouldReuseRoute = () => {
       return false;
     };
+    document.getElementsByTagName("input")[0].addEventListener("keyup", function(event) {
+    event.preventDefault();
+    if (event.keyCode === 13) {
+        document.getElementById("search").click();
+    }
+});
     this.auth.subject.subscribe(data => {
       this.user = data;
       if (!this.user || this.user === '') {

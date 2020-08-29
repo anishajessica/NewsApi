@@ -1,62 +1,19 @@
 {
-  "user1": [
-    {
-      "source": {
-        "id": null,
-        "name": "Lifehacker.com"
-      },
-      "author": "Emily Long",
-      "title": "The Best Way to Pack a Cooler",
-      "description": "There are few things more disappointing in the height of summer than pulling a lukewarm beer or spoiled food out of your cooler. Truly keeping food and beverages cold in very hot weather may seem like an impossible task, but it can be done if you pack your co…",
-      "url": "https://lifehacker.com/the-best-way-to-pack-a-cooler-1844605820",
-      "urlToImage": "https://i.kinja-img.com/gawker-media/image/upload/c_fill,f_auto,fl_progressive,g_center,h_675,pg_1,q_80,w_1200/jcdbbhauex3maa14hon7.jpg",
-      "publishedAt": "2020-08-04T16:45:00Z",
-      "content": "There are few things more disappointing in the height of summer than pulling a lukewarm beer or spoiled food out of your cooler. Truly keeping food and beverages cold in very hot weather may seem lik… [+3417 chars]",
-      "id": "httpslifehackercomthebestwaytopackacooler"
-    },
-    {
-      "source": {
-        "id": "bbc-news",
-        "name": "BBC News"
-      },
-      "author": null,
-      "title": "Naomi Osaka and Serena Williams top as tennis dominates rich list",
-      "description": "The world's nine highest-earning sportswomen over the past year are all tennis players, according to US business magazine Forbes.",
-      "url": "https://www.bbc.co.uk/sport/tennis/53831998",
-      "urlToImage": "https://ichef.bbci.co.uk/live-experience/cps/624/cpsprodpb/55BF/production/_114015912_osaka_getty.jpg",
-      "publishedAt": "2020-08-19T08:32:24Z",
-      "content": "Naomi Osaka (left) and Serena Williams (right) each earned almost three times as much as the third sportswoman on the list, Ashleigh Barty\r\nThe world's nine highest-earning sportswomen over the past … [+2108 chars]",
-      "id": "httpswwwbbccouksporttennis"
-    }
-  ],
+  "user1": [],
   "user2": [
     {
       "source": {
-        "id": "mashable",
-        "name": "Mashable"
+        "id": "vice-news",
+        "name": "Vice News"
       },
-      "author": "Emmet Smith",
-      "title": "An Olympian swam across a pool with a glass of chocolate milk on her head. TikTok responded.",
-      "description": "Five-time Olympic gold medalist Katie Ledecky started the #gotmilkchallenge on TikTok after swimming the length of a pool with a glass of chocolate milk on her head. Needless to say, TikTok gave its collective best to one up her.  Read more...More about Viral…",
-      "url": "https://mashable.com/video/katie-ledecky-got-milk-challenge-tik-tok/",
-      "urlToImage": "https://mondrian.mashable.com/2020%252F08%252F04%252F3b%252F648895069bed4b398166162d377a60c1.e6b01.jpg%252F1200x630.jpg?signature=TcD5awBxaUrDpxtUZLuVCVD0Z0c=",
-      "publishedAt": "2020-08-04T16:42:42Z",
-      "content": "Five-time Olympic gold medalist Katie Ledecky started the #gotmilkchallenge on TikTok after swimming the length of a pool with a glass of chocolate milk on her head. Needless to say, TikTok gave its … [+29 chars]",
-      "id": "httpsmashablecomvideokatieledeckygotmilkchallengetiktok"
-    },
-    {
-      "source": {
-        "id": null,
-        "name": "Firstpost"
-      },
-      "author": null,
-      "title": "Tenet movie review: Christopher Nolan’s least-engaging film in years - Firstpost",
-      "description": "Tenet represents a dangerous gambit in the age of COVID-19: a blockbuster so must-see the studio hopes audiences will risk infection and death just to catch a glimpse of its brilliance. But in the end, Tenet is just a movie, as it was always going to be.",
-      "url": "https://www.firstpost.com/entertainment/tenet-movie-review-christopher-nolans-least-engaging-film-in-years-8755681.html",
-      "urlToImage": "https://images.firstpost.com/wp-content/uploads/2020/06/tenet-640.jpg",
-      "publishedAt": "2020-08-26T08:03:05Z",
-      "content": "Tenet represents a dangerous gambit in the age of COVID-19: a blockbuster so must-see the studio hopes audiences will risk infection and death just to catch a glimpse of its brilliance. But in the en… [+9323 chars]",
-      "id": "httpswwwfirstpostcomentertainmenttenetmoviereviewchristophernolansleastengagingfilminyearshtml"
+      "author": "Mark Hay, Amy Rose Spiegel",
+      "title": "I Have Tourette's and He's on the Autism Spectrum. Here's How We Have Sex",
+      "description": "\"We take showers together. We touch. We kiss. We sleep together. We hold each other. We meow like cats.\"",
+      "url": "https://www.vice.com/en_us/article/5dzqen/tourettes-syndrome-autism-spectrum-disorder-how-we-have-sex",
+      "urlToImage": "https://video-images.vice.com//articles/5f36b0ab85c96d0097fb9b48/lede/1597426494596-i-have-an-autism-spectrum-disorder-my-wife-has-tourettes-this-is-how-we-have-sexlede-and-socialhfcv.jpeg?image-resize-opts=Y3JvcD0xeHc6MC40ODN4aDsweHcsMHhoJnJlc2l6ZT0xMjAwOiomcmVzaXplPTEyMDA6Kg",
+      "publishedAt": "2020-08-17T13:44:24Z",
+      "content": "When people with neurodevelopmental disorders that affect their social communication capabilitieslike Paul and Grace, an older couple who, respectively, have Aspergers syndrome, an autism spectrum di… [+9057 chars]",
+      "id": "httpswwwvicecomenusarticledzqentourettessyndromeautismspectrumdisorderhowwehavesex"
     }
   ]
 }

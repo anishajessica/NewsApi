@@ -50,7 +50,8 @@ h1{
   padding: 1.5;
   }
    img{
-     font-size: smaller;
+     padding-top: 10vh;
+     font-size: 1em;
      text-align: center;
    }
   img:hover + mat-card-content{
