@@ -17,6 +17,8 @@ export class FavServiceService {
   initializeFavList() {
     this.apiService.getAllFavorites().subscribe(
       data => {
+        console.log(data);
+        
         this.favList = [];
         data.forEach(element => {
           if (this.auth.isUserAuthenticated(this.auth.getBearerToken())) {
@@ -31,6 +33,7 @@ export class FavServiceService {
       }
     );
   }
+
   updateFavList(news: News) {
     const index = this.favList.findIndex((element) => {
       return element.url === (news.url);

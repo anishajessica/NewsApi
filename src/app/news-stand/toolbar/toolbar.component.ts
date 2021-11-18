@@ -14,8 +14,8 @@ export class ToolbarComponent implements OnInit {
   public date = new Date();
   public display = false;
   public search: string;
-  private user: string;
-  private value = false;
+  public user: string;
+  public value = false;
 
   constructor(private apiService: ApiServiceService, private router: Router, private auth: AuthServiceService) {
   }

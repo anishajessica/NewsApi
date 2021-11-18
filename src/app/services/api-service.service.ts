@@ -46,10 +46,6 @@ export class ApiServiceService {
     return this.httpClient.get<News[]>(this.url);
   }
   removeFavorite(news: News) {
-    this.auth.subject.subscribe(data => {
-      this.user = data;
-      console.log(data);
-    });
     this.url = `http://localhost:3000/${this.user}/${news.id}`;
     return this.httpClient.delete<News>(this.url);
   }

@@ -1,19 +1,34 @@
 {
-  "user1": [],
+  "user1": [
+    {
+      "source": {
+        "id": null,
+        "name": "Gizmodo.com"
+      },
+      "author": "Victoria Song",
+      "title": "Goodbye CBS All Access, Hello Paramount+",
+      "description": "Just as CBS All Access was finally getting good, ViacomCBS announced today it will rebrand the whole thing as Paramount+ in early 2021.Read more...",
+      "url": "https://gizmodo.com/goodbye-cbs-all-access-hello-paramount-1845061143",
+      "urlToImage": "https://i.kinja-img.com/gawker-media/image/upload/c_fill,f_auto,fl_progressive,g_center,h_675,pg_1,q_80,w_1200/rtmhf93qa15qskgzmy5d.jpg",
+      "publishedAt": "2020-09-15T13:42:00Z",
+      "content": "Just as CBS All Access was finally gettinggood, ViacomCBS announced today it will rebrand the whole thing as Paramount+ in early 2021.\r\nAre we surprised that yet another media company has decided to … [+2621 chars]",
+      "id": "httpsgizmodocomgoodbyecbsallaccesshelloparamount"
+    }
+  ],
   "user2": [
     {
       "source": {
-        "id": "vice-news",
-        "name": "Vice News"
+        "id": null,
+        "name": "New York Times"
       },
-      "author": "Mark Hay, Amy Rose Spiegel",
-      "title": "I Have Tourette's and He's on the Autism Spectrum. Here's How We Have Sex",
-      "description": "\"We take showers together. We touch. We kiss. We sleep together. We hold each other. We meow like cats.\"",
-      "url": "https://www.vice.com/en_us/article/5dzqen/tourettes-syndrome-autism-spectrum-disorder-how-we-have-sex",
-      "urlToImage": "https://video-images.vice.com//articles/5f36b0ab85c96d0097fb9b48/lede/1597426494596-i-have-an-autism-spectrum-disorder-my-wife-has-tourettes-this-is-how-we-have-sexlede-and-socialhfcv.jpeg?image-resize-opts=Y3JvcD0xeHc6MC40ODN4aDsweHcsMHhoJnJlc2l6ZT0xMjAwOiomcmVzaXplPTEyMDA6Kg",
-      "publishedAt": "2020-08-17T13:44:24Z",
-      "content": "When people with neurodevelopmental disorders that affect their social communication capabilitieslike Paul and Grace, an older couple who, respectively, have Aspergers syndrome, an autism spectrum di… [+9057 chars]",
-      "id": "httpswwwvicecomenusarticledzqentourettessyndromeautismspectrumdisorderhowwehavesex"
+      "author": "Kristin Merrilees and Amy Lombard",
+      "title": "Christmas Time Is … Here?",
+      "description": "On TikTok, the holiday spirit has come early.",
+      "url": "https://www.nytimes.com/2020/08/29/style/christmas-time-is-here.html",
+      "urlToImage": "https://static01.nyt.com/images/2020/08/28/fashion/29CHRISTMAS-pool-2/29CHRISTMAS-pool-2-facebookJumbo.jpg",
+      "publishedAt": "2020-08-29T09:00:14Z",
+      "content": "Hannah Smith is usually not one of those people who gets excited about Christmas in July, she said.\r\nThis year has been different, though. On July 13, Ms. Smith, a 20-year-old aesthetician, posted a … [+528 chars]",
+      "id": "httpswwwnytimescomstylechristmastimeisherehtml"
     }
   ]
 }

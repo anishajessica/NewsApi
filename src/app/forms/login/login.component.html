@@ -2,7 +2,7 @@
   <section class="mask">
     <mat-card>
       <mat-card-title>LOGIN</mat-card-title>
-      <form #loginForm='ngForm'>
+      <form #loginForm='ngForm' submit="login(name.value,password.value)">
         <mat-form-field>
           <input type="text" required #name='ngModel' matInput placeholder="Username" name="fname" ngModel>
         </mat-form-field>
